@@ -15,7 +15,8 @@
 }
 html{
     font-size: 62.5%;
-    font-family: 'Cormorant Garamond', serif;
+    /* font-family: 'Cormorant Garamond', serif; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     font-size: 16px;
@@ -30,7 +31,7 @@ body{
 .header{
     background-color: var(--first-color);
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 6rem;
     z-index: 999;
 }
@@ -69,14 +70,22 @@ body{
     background-attachment: fixed;
     background-position: left center;
     height: 100vh;
+}
+
+.home-container{
+    max-width: 104rem;
+    height: 100%;
+    margin: auto;
+    padding-left: 2rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: center;
 }
 
 
 .inicio__presentation{
+    /* font-size: 2.2rem; */
     font-weight:bold;
     margin-bottom: 10rem;
     flex-shrink: 0;
@@ -139,16 +148,17 @@ body{
 
 .speakers__container>h2{
     padding-left: 3rem;
-    margin-top: 3rem;
+    padding-top: 3rem;
 }
 .speakers__container>p {
     padding-left: 3rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
 
 .speaker{
     position: relative;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
     margin: 2rem auto;
     background-color: var(--second-color);
     line-height: 3rem;
@@ -201,7 +211,6 @@ body{
 /*********  agenda   ************/
 
 .agenda{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     background-color: var(--third-color);
     height: min-content;
@@ -213,7 +222,7 @@ body{
     max-width: 104rem;
     color: var(--second-color);
     display: grid;
-    grid-template-rows: 12rem repeat(5, 8rem) 30rem 10rem;
+    grid-template-rows: 12rem repeat(5, 8rem) 50rem 10rem;
     /* grid-template-columns: 1fr 4fr; */
     align-items: center;
 }
@@ -227,11 +236,11 @@ body{
 
 .agenda__items{
     padding: 3rem 0;
-    border-bottom: .2rem solid var(--fourth-color);
     display: flex;
 }
-.agenda__items:last-child{
-    border: none;
+
+.agenda__items:nth-child(-n+5){
+    border-bottom: .2rem solid var(--fourth-color);
 }
 
 .agenda__time{
@@ -259,16 +268,137 @@ body{
 }
 
 
+.status{
+    /* margin-top: 10rem; */
+    background-color: var(--second-color);
+    width: 100%;
+    height: 100%;
+    padding: 0 4rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+}
+
+.status>div{
+    height: 100%;
+    padding: 4rem 0;
+}
+
+.status h3{
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--third-color);
+}
+
+.status h5{
+    font-size: 2rem;
+    text-align: center;
+    color: #869ec4;
+}
+
+.status__speakers{
+    border-top: .2rem solid var(--first-color);
+    border-bottom: .2rem solid var(--first-color);
+}
+
+.purple{
+    margin: 0 7rem;
+    background-color: var(--first-color);
+    color: var(--second-color);
+}
+
+/**************  place  ************/
+.place{
+    min-width: 90vw;
+}
+
+.place-container{
+    margin: auto;
+    max-width: 104rem;
+}
+
+.photo-place>img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.place__description{
+    width: 100%;
+    padding: 2rem 0rem 2rem 4rem;
+    background-color: var(--fourth-color);
+    line-height: 3rem;
+    color: #3A4961;
+}
+
+/* .place__description p{
+    margin-top: 2rem;
+} */
+
+.place__direction{
+    padding: 2rem 0rem 4rem 2rem;
+    color: var(--first-color);
+}
+
+
+/************   sponsors   **********/
+
+.sponsors{
+    background-color: var(--first-color);
+    color: var(--second-color);
+    min-width: 100%;
+}
+.sponsors__container{
+    margin: auto;
+    max-width: 104rem;
+    padding-bottom: 3rem;
+    /* padding-right: 0; */
+}
+.sponsors__head{
+    padding: 3rem;
+}
+
+.sponsors__logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.sponsors__logo div{
+    padding: 2rem;
+    /* width: 10rem; */
+}
+
+.sponsors__logo img{
+    width: 10rem;
+    object-fit: cover;
+}
+
+
+
+
 
 /******  footer  *******/
 
 .footer{
     background-color: var(--first-color);
     color: var(--second-color);
-    text-align: center;
+    width: 100%;
+    height: 8rem;
 }
 
-.footer a{
+.footer__container{
+    margin: auto;
+    max-width: 104rem;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__container a{
     color: var(--second-color);
 }
 
