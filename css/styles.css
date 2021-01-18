@@ -26,20 +26,61 @@ body{
     font-weight: bold;
 } */
 
+
+
+/***********   general   ***********/
+
+.container{
+    max-width: 104rem;
+    margin: auto;
+    height: 100%;
+}
+
+
+.scroll-up{
+    border: .2rem solid var(--fourth-color);
+    background-color: #38383881;
+    color: var(--second-color);
+    transform: rotate(90deg);
+    text-align: center;
+    font-size: 4rem;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    right: -.2rem;
+    bottom: 5rem;
+    z-index: 9999;
+}
+.scroll-up a{
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
 /*********** header ************/
 
 .header{
     background-color: var(--first-color);
+    border-bottom: .2rem solid #840eeb;
     position: fixed;
-    width: 100vw;
+    width: 100%;
     height: 6rem;
     z-index: 999;
 }
 
-.header-container{
-    margin: auto;
-    max-width: 104rem;
-    height: 100%;
+.header .container{
     display: flex;
     justify-content: space-between;
 }
@@ -62,6 +103,28 @@ body{
     cursor: pointer;
 }
 
+.menu{
+    background-color: var(--first-color);
+    position: fixed;
+    top: 6rem;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+.menu a{
+    text-decoration: none;
+    text-align: center;
+    color: var(--second-color);
+    font-size: 3rem;
+    padding: 3rem;
+    width: 100%;
+    border-bottom: .2rem solid #840eeb;
+}
+
 /*********** home ************/
 
 .home{
@@ -72,10 +135,7 @@ body{
     height: 100vh;
 }
 
-.home-container{
-    max-width: 104rem;
-    height: 100%;
-    margin: auto;
+.home .container{
     padding-left: 2rem;
     display: flex;
     flex-wrap: wrap;
@@ -116,7 +176,7 @@ body{
     color: var(--fourth-color)
 }
 
-.buy-tequets{
+.buy-tickets{
     margin-top: 5rem;
     margin-left: 0;
     padding: 1rem;
@@ -129,8 +189,9 @@ body{
 }
 
 
-.buy-tequets:focus {
+.buy-tickets:focus, .buy-tickets:hover {
     outline: none;
+    background-color: var(--fourth-color);
 }
 
 /*********** section speakers ************/
@@ -138,22 +199,18 @@ body{
 .speakers{
     display: flex;
     flex-direction: column;
-    width: 100%;
     background-color: var(--fourth-color);
 }
-.speakers__container{
-    margin: auto;
-    max-width: 104rem;
-}
 
-.speakers__container>h2{
-    padding-left: 3rem;
+
+.speakers .container>h2{
     padding-top: 3rem;
-}
-.speakers__container>p {
     padding-left: 3rem;
+}
+.speakers .container>p {
     margin-top: 2rem;
     margin-bottom: 3rem;
+    padding-left: 3rem;
 }
 
 .speaker{
@@ -213,13 +270,10 @@ body{
 .agenda{
     font-weight: bold;
     background-color: var(--third-color);
-    height: min-content;
     padding: 0 4rem;
 }
 
-.agenda-container{
-    margin: auto;
-    max-width: 104rem;
+.agenda .container{
     color: var(--second-color);
     display: grid;
     grid-template-rows: 12rem repeat(5, 8rem) 50rem 10rem;
@@ -308,15 +362,11 @@ body{
     color: var(--second-color);
 }
 
-/**************  place  ************/
-.place{
-    min-width: 90vw;
+.purple:hover{
+    background-color: #840eeb;
 }
 
-.place-container{
-    margin: auto;
-    max-width: 104rem;
-}
+/**************  place  ************/
 
 .photo-place>img{
     width: 100%;
@@ -331,9 +381,9 @@ body{
     color: #3A4961;
 }
 
-/* .place__description p{
-    margin-top: 2rem;
-} */
+.place__description p{
+    margin-right: 2rem;
+}
 
 .place__direction{
     padding: 2rem 0rem 4rem 2rem;
@@ -348,11 +398,8 @@ body{
     color: var(--second-color);
     min-width: 100%;
 }
-.sponsors__container{
-    margin: auto;
-    max-width: 104rem;
+.sponsors .container{
     padding-bottom: 3rem;
-    /* padding-right: 0; */
 }
 .sponsors__head{
     padding: 3rem;
@@ -376,10 +423,101 @@ body{
 }
 
 
+/*************   contact   *************/
+
+.contact{
+    background-color: var(--third-color);
+    color: var(--second-color);
+}
+
+.contact .container{
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:min-content minmax(20rem, 1fr);
+}
+
+.inicio__presentation--contact{
+    border-bottom: .2rem solid var(--fourth-color);
+    padding-left: 1rem;
+    padding-bottom: 5rem;
+    height: 100%;
+}
+
+.contact__details{
+    border-bottom: .2rem solid var(--fourth-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.contact__details div{
+    flex-grow: 1;
+    margin: 2rem 1.5rem;
+}
+
+.contact__details button{
+    margin: 0;
+}
+
+form{
+    margin: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact--us h3{
+    margin: 3rem auto;
+}
+
+.contact--us input{
+    border: .2rem solid var(--fourth-color);
+    background-color: inherit;
+    border-radius: .5rem;
+    color: var(--second-color);
+    outline: none;
+    font-size: 2rem;
+    width: 28rem;
+    height: 7rem ;
+    margin: 1rem;
+}
+
+.contact--us input:first-child{
+    padding: 0 4rem;
+}
+
+.contact--us input::placeholder{
+    color: var(--fourth-color);
+}
+
+.contact--us input:focus,input:hover{
+    background-color: #3A4961;
+}
+
+.contact--us input:last-child:hover{
+    cursor: pointer;
+    background-color: var(--first-color);
+    border: none;
+}
 
 
+.social{
+    display: flex;
+    justify-content: center;
+}
 
-/******  footer  *******/
+.social a{
+    width: 6rem;
+    margin: 2rem;
+}
+
+.social img{
+    width: 100%;
+}
+
+
+/************  footer  **************/
 
 .footer{
     background-color: var(--first-color);
@@ -388,20 +526,17 @@ body{
     height: 8rem;
 }
 
-.footer__container{
-    margin: auto;
-    max-width: 104rem;
-    height: 100%;
+.footer .container{
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer__container a{
+.footer .container a{
     color: var(--second-color);
 }
 
-.hiden{
+.none{
     display: none;
 }

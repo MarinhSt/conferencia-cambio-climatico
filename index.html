@@ -18,7 +18,7 @@
 	</head>
 	<body>
 		<header class="header">
-			<section class="header-container">
+			<section class="container">
 				<div class="header__logo">
 					<a href="./index.html">CCC 22</a>
 				</div>
@@ -30,24 +30,22 @@
 					/>
 					<img
 						id="cerrar-menu"
-						class="hiden"
+						class="none"
 						src="./resourses/cerrar.png"
 						alt="icono cerrar el menu"
 					/>
 				</button>
-				<div class="menu hiden">
-					<nav class="menu__nav">
-						<a href="#inicio">Inicio</a>
-						<a href="#speakernentes">speakernentes</a>
-						<a href="#agenda">Agenda</a>
-						<a href="#lugar">Lugar</a>
-						<a href="#contacto">Contacto</a>
-					</nav>
-				</div>
+				<nav class="menu none">
+					<a href="#inicio">Inicio</a>
+					<a href="#exponentes">exponentes</a>
+					<a href="#agenda">Agenda</a>
+					<a href="#lugar">Lugar</a>
+					<a href="#contacto">Contacto</a>
+				</nav>
 			</section>
 		</header>
 		<section id="inicio" class="home">
-			<div class="home-container">
+			<div class="container">
 				<div>
 					<div class="inicio__presentation">
 						<h1>Conferencia<br />Cambio Climatico 2022</h1>
@@ -61,14 +59,21 @@
 							<a href="#lugar">MEDELLIN CO.</a>
 						</div>
 					</div>
-					<button class="buy-tequets" type="submit">
-						Comprar Tiquets
+					<button
+						onclick="location.href='../tickets/tickets.html'"
+						class="buy-tickets"
+						type="submit"
+					>
+						Comprar tickets
 					</button>
 				</div>
 			</div>
 		</section>
-		<section id="speakernentes" class="speakers">
-			<div class="speakers__container">
+		<div class="scroll-up">
+			<span><a href="#inicio"><</a></span>
+		</div>
+		<section id="exponentes" class="speakers">
+			<div class="container">
 				<h2>Los Exponentes</h2>
 				<p class="speaker__order">
 					04 --- Expertos en el cambio climatico
@@ -80,14 +85,23 @@
 							alt="foto"
 						/>
 					</div>
-					<div class="speaker__follow follow_1">
+					<div class="speaker__follow">
 						<h3>FOLLOW</h3>
-						<a href=""></a>
-						<img src="./resourses/twitter.png" alt="logo twitter" />
-						<a href=""></a>
-						<a href=""></a>
-						<img src="./resourses/insta.png" alt="logo instagram" />
-						<a href=""></a>
+						<a
+							href="https://twitter.com/cfigueres?lang=es"
+							target="_blank"
+							><img
+								src="./resourses/icons/twitter.png"
+								alt="logo twitter"
+						/></a>
+						<a
+							href="https://www.instagram.com/Cfigueres/"
+							target="_blank"
+						>
+							<img
+								src="./resourses/icons/insta.png"
+								alt="logo instagram"
+						/></a>
 					</div>
 					<div class="speaker__description">
 						<p class="speaker__order">
@@ -104,6 +118,12 @@
 							Kioto. Una promotora fundamental de la participación
 							activa de América Latina en los asuntos
 							medioambientales de Naciones Unidas.
+							<a
+								href="https://es.wikipedia.org/wiki/Christiana_Figueres"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Ver más
+							</a>
 						</p>
 					</div>
 				</div>
@@ -114,20 +134,20 @@
 							alt="foto"
 						/>
 					</div>
-					<div class="speaker__follow follow_2">
+					<div class="speaker__follow">
 						<h3>FOLLOW</h3>
-						<div>
-							<img
-								src="./resourses/twitter.png"
+						<a
+							href="https://twitter.com/laurencetubiana?lang=es"
+							target="_blank"
+							><img
+								src="./resourses/icons/twitter.png"
 								alt="logo twitter"
-							/>
-						</div>
-						<div>
+						/></a>
+						<a href="https://www.instagram.com" target="_blank">
 							<img
-								src="./resourses/insta.png"
+								src="./resourses/icons/insta.png"
 								alt="logo instagram"
-							/>
-						</div>
+						/></a>
 					</div>
 					<div class="speaker__description">
 						<p class="speaker__order">
@@ -135,11 +155,20 @@
 						</p>
 						<h2>Laurence Tubiana</h2>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Itaque culpa dolorem pariatur accusantium
-							omnis est ea laudantium suscipit ut ipsam, quos
-							quasi dolorum nihil sint vero deserunt magnam iure
-							voluptas!
+							Fue nombrada representante especial del gobierno
+							francés y embajadora encargada de las negociaciones
+							para la Conferencia de las Naciones Unidas sobre el
+							Cambio Climático de 2015 (COP21); Estuvo a carga en
+							particular de negociar el acuerdo internacional
+							concluido en París (o Acuerdo de París) el 12 de
+							diciembre de 2015, durante la Conferencia de París
+							de 2015 sobre el clima.
+							<a
+								href="https://es.wikipedia.org/wiki/Laurence_Tubiana"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Ver más
+							</a>
 						</p>
 					</div>
 				</div>
@@ -151,20 +180,23 @@
 							alt="foto"
 						/>
 					</div>
-					<div class="speaker__follow follow_3">
+					<div class="speaker__follow">
 						<h3>FOLLOW</h3>
-						<div>
-							<img
-								src="./resourses/twitter.png"
+						<a
+							href="https://twitter.com/emmanuelmacron?lang=es"
+							target="_blank"
+							><img
+								src="./resourses/icons/twitter.png"
 								alt="logo twitter"
-							/>
-						</div>
-						<div>
+						/></a>
+						<a
+							href="https://www.instagram.com/emmanuelmacron/?hl=es-la"
+							target="_blank"
+						>
 							<img
-								src="./resourses/insta.png"
+								src="./resourses/icons/insta.png"
 								alt="logo instagram"
-							/>
-						</div>
+						/></a>
 					</div>
 					<div class="speaker__description">
 						<p class="speaker__order">
@@ -172,11 +204,20 @@
 						</p>
 						<h2>Emmanuel Macron</h2>
 						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Hic esse minima asperiores, consequuntur
-							praesentium tempore dolorum perferendis nemo qui nam
-							culpa quae necessitatibus magnam in quod ex
-							consequatur? Amet, voluptatibus.
+							«Estamos perdiendo la batalla del cambio climático y
+							el calentamiento del planeta». Así de tajante se
+							mostró el presidente Emmanuel Macron ante decenas de
+							dirigentes mundiales en la última Cumbre del Clima.
+							Y prosiguió con un aviso a navegantes: «No hay que
+							equivocarse, parece que vivimos un buen momento,
+							todo es formidable, pero estamos perdiendo la
+							batalla».
+							<a
+								href="https://www.revistacircle.com/2018/07/25/lideres-en-la-lucha-del-cambio-climatico/"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Ver más
+							</a>
 						</p>
 					</div>
 				</div>
@@ -187,20 +228,23 @@
 							alt="foto"
 						/>
 					</div>
-					<div class="speaker__follow follow_4">
+					<div class="speaker__follow">
 						<h3>FOLLOW</h3>
-						<div>
-							<img
-								src="./resourses/twitter.png"
+						<a
+							href="https://twitter.com/gretathunberg?lang=es"
+							target="_blank"
+							><img
+								src="./resourses/icons/twitter.png"
 								alt="logo twitter"
-							/>
-						</div>
-						<div>
+						/></a>
+						<a
+							href="https://www.instagram.com/gretathunberg/"
+							target="_blank"
+						>
 							<img
-								src="./resourses/insta.png"
+								src="./resourses/icons/insta.png"
 								alt="logo instagram"
-							/>
-						</div>
+						/></a>
 					</div>
 					<div class="speaker__description">
 						<p class="speaker__order">
@@ -208,18 +252,29 @@
 						</p>
 						<h2>Greta Thunberg</h2>
 						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing
-							elit. Quisquam placeat ut nobis dolor magnam
-							laudantium beatae commodi, necessitatibus iusto
-							accusamus illum quae voluptatibus facere tempora at
-							provident ipsa natus? Sunt.
+							Greta Tintin Eleonora Ernman Thunberg, más conocida
+							como Greta Thunberg, activista medioambiental sueca,
+							centrada en los riesgos planteados por el
+							calentamiento global. Thunberg ha insistido en
+							cuatro afirmaciones: que la humanidad enfrenta una
+							crisis existencial debido al cambio climático, que
+							la generación actual de adultos es responsable del
+							cambio climático, que el cambio climático tendrá un
+							efecto desproporcionado en los jóvenes y que se está
+							haciendo muy poco sobre la situación.
+							<a
+								href="https://es.wikipedia.org/wiki/Greta_Thunberg#Activismo"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Ver más
+							</a>
 						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="agenda" class="agenda">
-			<div class="agenda-container">
+			<div class="container">
 				<h2>Agenda</h2>
 				<div class="agenda__items">
 					<p class="agenda__time"><span>12:30</span></p>
@@ -255,8 +310,12 @@
 						<h5>ESPECTADORES</h5>
 					</div>
 				</div>
-				<button class="buy-tequets purple" type="submit">
-					Comprar Tiquets
+				<button
+					onclick="location.href='../tickets/tickets.html'"
+					class="buy-tickets purple"
+					type="submit"
+				>
+					Comprar tickets
 				</button>
 			</div>
 		</section>
@@ -267,7 +326,7 @@
 					alt="Teatro metropolitano de MEDELLIN"
 				/>
 			</div>
-			<div class="place-container">
+			<div class="container">
 				<div class="place__description">
 					<h2>El Lugar</h2>
 					<p class="place__direction">
@@ -287,10 +346,10 @@
 			</div>
 		</section>
 		<article class="sponsors">
-			<div class="sponsors__container">
+			<div class="container">
 				<div class="sponsors__head">
 					<h2>Nuestros Patrosinadores</h2>
-				<p>06 --- Compañias comprometidas</p>
+					<p>06 --- Compañias comprometidas</p>
 				</div>
 				<div class="sponsors__logo">
 					<div>
@@ -332,9 +391,90 @@
 				</div>
 			</div>
 		</article>
-		<section id="contacto" class="contacto"></section>
+		<section id="contacto" class="contact">
+			<div class="container">
+				<div class="inicio__presentation--contact">
+					<h1>Conferencia<br />Cambio Climatico 2022</h1>
+					<p>-----El mayor reto de la humanidad</p>
+				</div>
+				<div class="contact__details">
+					<div>
+						<h3>Que ?</h3>
+						<p>
+							Conferencia sobre <br />
+							el cambio climatico
+						</p>
+					</div>
+					<div class="">
+						<h3>Cuando ?</h3>
+						<p>abril 11, 2022</p>
+					</div>
+					<div class="place__direction--contact">
+						<h3>Donde ?</h3>
+						<p>
+							Calle 41 No. 57 - 30 <br />
+							Medellín, Colombia
+						</p>
+					</div>
+					<div>
+						<button
+							onclick="location.href='../tickets/tickets.html'"
+							class="buy-tickets purple"
+							type="submit"
+						>
+							Comprar tickets
+						</button>
+					</div>
+				</div>
+				<div class="contact--us">
+					<h3>Contactanos</h3>
+					<p>
+						Para mas informacion, no dude en ponerse en contacto con
+						nuestro quipo atraves de las redes sociales. <br />
+						<br />
+						Tambien puedes dejar un correo y el nuestro quipo se
+						pondra en contacto.
+					</p>
+					<form>
+						<input
+							type="email"
+							placeholder="su correo electronico"
+							autocomplete="email"
+							required
+						/>
+						<input type="submit" value="enviar" />
+					</form>
+				</div>
+				<div class="social">
+					<a
+						href="https://co.linkedin.com/"
+						target="_blank"
+						rel="noopener noreferrer"
+						><img
+							src="./resourses/icons/linkedin-white.png"
+							alt="perfil de linkedin"
+					/></a>
+					<a
+						href="https://www.github.com/MarinhSt"
+						target="_blank"
+						rel="noopener noreferrer"
+						><img
+							src="./resourses/icons/github-white.png"
+							alt="perfil de github"
+					/></a>
+					<a
+						href="https://twitter.com/Santiag21879983"
+						target="_blank"
+						rel="noopener noreferrer"
+						><img
+							src="./resourses/icons/twitter-white.png"
+							alt="perfil de twitter"
+					/></a>
+				</div>
+			</div>
+		</section>
 		<footer class="footer">
-			<div class="footer__container">
+			<div class="container">
 				<h4>
 					2021 by CCC. creado por<br />
 					<a href="https://github.com/MarinhSt" target="_blanck"
@@ -343,5 +483,6 @@
 				</h4>
 			</div>
 		</footer>
+		<script src="./scripts/script.js"></script>
 	</body>
 </html>
