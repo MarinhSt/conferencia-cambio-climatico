@@ -1,0 +1,214 @@
+/*********** custom properties ************/
+:root{
+    --first-color: #9013FE;
+    --second-color: #fafafa;
+    --third-color: #0C1D39;
+    --fourth-color : #C9D1DE;
+}
+
+
+
+
+html{
+    font-size: 62.5%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+
+
+/*********** header ************/
+.header .container{
+    display: flex;
+    /* justify-content:space-around; */
+}
+
+.header__logo{
+    margin: 1rem 2rem;
+    font-size: 3rem;
+    width: max-content;
+    flex-shrink: 0;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.menu{
+    position: static;
+    min-width: max-content;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.menu a{
+    flex:1;
+    font-size: 2rem;
+    padding: 1.5rem;
+    min-width: max-content;
+    border: none;
+    transition: flex .6s;
+}
+.menu a:hover{
+    flex: 5;
+    background-color: #9e34fc;
+}
+
+/*********** home ************/
+.home{
+    height: calc(100vh - 6rem);
+}
+
+.home .container{
+    padding-left: 10rem;
+    padding-right: 3rem;
+    justify-content: start;
+}
+
+.home .container>div{
+    margin-top: 30rem;
+    margin-bottom: 20rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+}
+
+.inicio__presentation{
+    grid-column: 1 / -1;
+    font-size: 2.2rem;
+}
+
+
+.inicio__fecha1{
+    background-color: #252525e0;
+    width: max-content;
+    grid-column: 2 / span 2;
+    grid-row: 2 / 3;
+    justify-self: end;
+    align-self: center;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    height: 7rem;
+}
+.inicio__fecha1 div{
+    padding: 2rem 2rem;
+}
+
+.home .buy-tickets{
+    width: max-content;
+    grid-column: 4 / -1;
+    grid-row: 2 / 3;
+    align-self: center;
+    font-size: 2rem;
+    height: 7rem;
+}
+
+/*********** section speakers ************/
+
+.speaker{
+    display: flex;
+    margin: 0;
+    padding: 8rem;
+}
+
+.speaker__photo{
+    width: 22rem;
+    height: 35rem;
+    flex-shrink: 0;
+}
+
+.speaker__photo > img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker__follow{
+    position: static;
+    transform: rotate(0deg) translate(0, 0);
+    width: 23rem;
+    height: 6rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: .2rem solid var(--fourth-color);
+}
+.speaker__follow img{
+    transform: rotate(0deg);
+    width: 2rem;
+}
+
+.speaker__description{
+    padding-top: 0;
+    padding-left: 5rem;
+}
+
+/**************   media queries   ***********/
+
+@media screen and (min-width: 1024px){
+    .home{
+        box-sizing: content-box;
+        height: 100%;
+    }
+
+    .home .container>div{
+        margin-top: 30rem;
+        margin-bottom: 2rem;
+    }
+    .inicio__presentation h1{
+        font-size: 6rem;
+    }
+
+    /*********  agenda   ************/
+
+.agenda{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.agenda__items{
+    padding: 4rem 0;
+}
+.status{
+    padding: 4rem 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100%;
+    align-items: center;
+}
+
+.status__speakers{
+    border-top: none;
+    border-bottom: none;
+    border-left: .2rem solid var(--first-color);
+    border-right: .2rem solid var(--first-color);
+}
+
+
+/**************  place  ************/
+
+.place{
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-place>img{
+    width: 50vw;
+    object-fit: cover;
+}
+
+.place__description{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+}

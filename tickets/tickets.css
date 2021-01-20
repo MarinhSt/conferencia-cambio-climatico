@@ -56,6 +56,47 @@ body{
 }
 
 .conference-description a{
-    color: #9946e2;
+    color: #f700ff;
     text-decoration: none;
+}
+
+/**************   media queries   ***********/
+
+@media screen and (min-width: 768px){
+    .tickets .container{
+        padding-bottom: 3rem;
+    }
+
+
+    .conference-description{
+        padding: 4rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    .tickets .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+    .img{
+        width: 80%;
+        order: 2;
+    }
+    
+    .img img{
+        height: 20rem;
+    }
+    .conference-description{
+        padding: 6rem;
+        order: 1;
+    }
+
+
+    .conference-description h1{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
 }
