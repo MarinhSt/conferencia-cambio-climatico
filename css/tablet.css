@@ -113,36 +113,16 @@ body{
 /*********** section speakers ************/
 
 .speaker{
-    display: flex;
     margin: 0;
     padding: 8rem;
 }
 
 .speaker__photo{
     width: 22rem;
-    height: 35rem;
-    flex-shrink: 0;
 }
 
 .speaker__photo > img{
-    height: 100%;
     object-fit: cover;
-}
-
-.speaker__follow{
-    position: static;
-    transform: rotate(0deg) translate(0, 0);
-    width: 23rem;
-    height: 6rem;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: .2rem solid var(--fourth-color);
-}
-.speaker__follow img{
-    transform: rotate(0deg);
-    width: 2rem;
 }
 
 .speaker__description{
@@ -209,6 +189,4 @@ body{
     flex-direction: column;
     justify-content: center;
 }
-
-
 }
